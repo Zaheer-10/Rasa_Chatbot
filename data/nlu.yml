@@ -1,0 +1,265 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - heyy
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - have a great day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - exactly
+
+- intent: deny
+  examples: |
+    - no
+    - nop
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no no never
+    - hehe no
+
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - is this the sales person?
+
+# -------------------------------
+
+- intent: enquiring_program
+  examples: |
+    - What courses are available?
+    - Tell me about the programs you offer.
+    - List of courses on your platform.
+    - Show me the available programs.
+    - Which degrees can I pursue?
+    - Is +2 is enough.
+    - what is the minimum eligibility to join the brocamp
+
+- intent: program_details
+  examples: |
+    - How long does the program last?
+    - What's the curriculum for [program]?
+    - Are there any prerequisites for [program]?
+    - Give me details about the [program] course.
+    - Duration of the [program] program?
+
+- intent: compare_programs
+  examples: |
+    - Compare [program1] and [program2].
+    - What are the differences between [program1] and [program2]?
+    - Compare the [program1] and [program2] courses.
+    - Can you help me decide between [program1] and [program2]?
+
+- intent: enquire_admission_criteria
+  examples: |
+    - What are the admission criteria?
+    - How can I qualify for admission?
+    - Tell me about the admission requirements.
+    - What do I need to get admitted?
+
+- intent: enquire_required_documents
+  examples: |
+    - What documents do I need to submit for admission?
+    - List of required admission documents.
+    - Can you provide a checklist of admission papers?
+    - Documents needed for admission?
+
+- intent: enquire_eligibility
+  examples: |
+    - What are the entry qualifications for [program]?
+    - Can I apply for [program] with [qualification]?
+    - Am I eligible for the [program] course?
+    - Is [qualification] sufficient for [program]?
+
+
+
+- intent: fumigation
+  examples: |
+    - What's the schedule for upcoming exams?
+    - Can you provide the exam timetable?
+    - When are the final exams held?
+    - Tell me about the exam dates.
+
+- intent: study_material
+  examples: |
+    - How can I access study materials for exams?
+    - Where can I find study resources?
+    - Provide study materials for [course] exams.
+    - Can you guide me to study resources?
+
+- intent: fumigation_tips
+  examples: |
+    - Share tips for preparing for exams.
+    - How should I prepare for my upcoming exams?
+    - Give me some study tips for better results.
+    - Help me with effective exam preparation.
+
+- intent: request_batch_extension
+  examples: |
+    - How can I request an extension for my exam?
+    - Can I get an extension for my exam deadline?
+    - What's the process for exam deadline extension?
+    - I need more time for my exam, what should I do?
+
+- intent: enquire_fumigation_format
+  examples: |
+    - What's the format of the [course] exam?
+    - How are the exams structured?
+    - Tell me about the exam pattern for [course].
+    - Explain the [course] examination style.
+
+- intent: fumigation_scores
+  examples: |
+    - How are exams graded?
+    - What's the grading scale for exams?
+    - How is the [course] exam evaluated?
+    - Explain the exam grading process.
+
+- intent: fumigation_results
+  examples: |
+    - When will the exam results be announced?
+    - How can I check my exam scores?
+    - Tell me about the release of exam results.
+    - When can I expect my [course] exam results?
+
+- intent: fumigation_retake_policy
+  examples: |
+    - What's the policy for retaking exams?
+    - Can I retake an exam if I fail?
+    - Tell me about the exam retake process.
+    - How many times can I retake an exam?
+
+
+- intent: program_agreement
+  examples: |
+    - Can you provide details about the admission agreement?
+    - Tell me about the terms in the admission agreement.
+    - Explain the content of the admission agreement.
+    - Where can I find the admission agreement?
+
+- intent: program_payment_terms
+  examples: |
+    - Explain the payment terms and conditions.
+    - What are the terms for fee payment?
+    - Tell me about the payment agreement.
+    - Where can I find information about payment terms?
+
+- intent: enquire_code_of_conduct
+  examples: |
+    - What's the code of conduct for students?
+    - Tell me about the student conduct policies.
+    - Explain the expected behavior as a student.
+    - Where can I find the code of conduct document?
+
+- intent: enquire_academic_honesty_policy
+  examples: |
+    - What's the policy on academic honesty?
+    - Tell me about the academic integrity guidelines.
+    - Explain the rules regarding plagiarism and cheating.
+    - Where can I learn about the academic honesty policy?
+
+- intent: enquire_privacy_policy
+  examples: |
+    - How can I access the privacy policy?
+    - Tell me about the platform's privacy practices.
+    - Explain the privacy policy for student data.
+    - Where can I find the detailed privacy policy?
+
+- intent: enquire_refund_policy
+  examples: |
+    - What's the policy for tuition fee refunds?
+    - Tell me about the refund guidelines.
+    - Explain the terms for requesting a refund.
+    - Where can I read the refund policy?
+
+- intent: enquire_remote_batch
+  examples: |
+    - How does remote learning work?
+    - Can you explain the process of online classes?
+    - Tell me about the online learning experience.
+    - What are the benefits of studying remotely?
+    - How do I access virtual classes for my program?
+
+- intent: on_site_facilities
+  examples: |
+    - What facilities and resources are available on campus?
+    - Can you explain the amenities provided on-site?
+    - Tell me about the library, labs, and study spaces.
+    - How can I access campus facilities for my studies?
+
+
+

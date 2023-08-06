@@ -1,0 +1,63 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: fill admission form
+  condition:
+  - active_loop: admission_form
+  steps:
+  - action: admission_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_form_submitted
+
+- rule: handle eligibility query
+  steps:
+  - intent: enquire_eligibility
+    entities:
+    - program: Web Development
+    - qualification: B.Tech
+  - action: action_check_eligibility
+    entities:
+    - program: Web Development
+    - qualification: B.Tech
+
+- rule: handle fumigation tips query
+  steps:
+  - intent: fumigation_tips
+  - action: action_generate_fumigation_tips
+
+- rule: fill batch extension form
+  condition:
+  - active_loop: batch_extension_form
+  steps:
+  - action: batch_extension_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_form_submitted
+
+- rule: handle code of conduct query
+  steps:
+  - intent: enquire_code_of_conduct
+  - action: utter_code_of_conduct_info
+  - action: utter_code_of_conduct_link
+
+- rule: handle privacy policy query
+  steps:
+  - intent: enquire_privacy_policy
+  - action: utter_privacy_policy_info
+  - action: utter_privacy_policy_link
+
+

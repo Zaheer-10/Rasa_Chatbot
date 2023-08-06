@@ -1,0 +1,89 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+story: enquire about programs
+steps:
+- intent: greet
+- action: utter_greet
+- intent: enquiring_program
+- action: utter_program_list
+- intent: program_details
+  entities:
+  - program: Data Science
+- action: utter_program_details
+  entities:
+  - program: Data Science
+- intent: compare_programs
+  entities:
+  - program1: Data Science
+  - program2: Machine Learning
+- action: utter_compare_programs
+  entities:
+  - program1: Data Science
+  - program2: Machine Learning
+
+story: enquire about fumigation schedule
+steps:
+- intent: greet
+- action: utter_greet
+- intent: fumigation
+- action: utter_fumigation_info
+- intent: fumigation_schedule
+- action: utter_fumigation_schedule
+
+story: request study material
+steps:
+- intent: greet
+- action: utter_greet
+- intent: study_material
+  entities:
+  - course: Pest Management
+- action: utter_study_material
+  entities:
+  - course: Pest Management
+
+story: enquire about program agreement
+steps:
+- intent: greet
+- action: utter_greet
+- intent: program_agreement
+- action: utter_program_agreement_info
+- action: utter_program_agreement_link
+
+story: request payment terms
+steps:
+- intent: greet
+- action: utter_greet
+- intent: program_payment_terms
+- action: utter_program_payment_terms_info
+- action: utter_program_payment_terms_link
+
+
